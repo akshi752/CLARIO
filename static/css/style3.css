@@ -1,9 +1,14 @@
+html {
+    background: linear-gradient(135deg, #f0e6fb, #e0d4f9);
+    overscroll-behavior: none;
+}
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #f0e6fb, #e0d4f9);
   color: #333;
   text-align: center;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 .guided-title {
