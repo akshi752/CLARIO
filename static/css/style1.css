@@ -1,0 +1,102 @@
+body {
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.tagline {
+  font-size: 1.75rem;
+  font-style: italic;
+  text-align: center;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+.heading {
+  font-family: "Great Vibes", cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 20vh;
+  letter-spacing: 3px;
+  color: #8e44ad;
+  animation: floatGlow 4s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+.btn {
+  position: relative;
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.75rem 2rem;
+
+  background-color: #8e44ad;
+  color: white;
+  font-size: 1rem;
+  border-radius: 999px;
+   border: 2px solid transparent; 
+  box-sizing: border-box;    
+
+}
+.btn:hover{
+    border:2px solid #8e44ad;
+}
+.disclaimer{
+    margin-top: 7rem;
+  padding: 1rem 1.5rem;
+
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+
+  color: #6b7280;
+  background: rgba(255, 255, 255, 0.6);
+
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 12px;
+}
+.below-btn-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem; 
+}
+
+.below-btn-img img {
+  max-width: 180px;   
+  width: 100%;
+  height: auto;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none !important;
+  color: inherit;
+}

@@ -1,0 +1,105 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f0e6fb, #e0d4f9);
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.guided-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #8e44ad;
+}
+
+.guided-instructions {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: linear-gradient(145deg, #ffffff, #f7f0ff);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 2rem;
+  flex: 1;
+}
+
+.practice-card {
+  border-left: 6px solid #8e44ad;
+}
+
+.speech-card {
+  border-right: 6px solid #8e44ad;
+}
+
+.card-image {
+  width: 80px;
+  margin: 20px auto 0 auto;
+  display: block;
+  filter: drop-shadow(0 5px 10px rgba(142,68,173,0.5));
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 40px rgba(142,68,173,0.3);
+}
+
+@keyframes card-slide {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-card {
+  animation: card-slide 0.8s ease forwards;
+}
+
+.start-record-btn {
+  background: linear-gradient(45deg, #8e44ad, #a569bd);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.start-record-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(142,68,173,0.4), 0 0 15px rgba(142,68,173,0.6);
+}
+
+.start-record-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.15);
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+.start-record-btn:hover::before {
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .row .col-md-5 {
+    max-width: 100%;
+  }
+}
